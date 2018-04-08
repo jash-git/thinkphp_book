@@ -39,8 +39,27 @@
 					-http://localhost:8080/thinkphp_book/home/test/list X
 						syntax error, unexpected 'list' (T_LIST), expecting identifier (T_STRING)
 			◆函數名稱用到系統關鍵字，必須在「模塊\Conf」目錄下的config.php中開啟 「'ACTION_SUFFIX' => 'Action'」一啟用全系統都要改，很麻煩，所以一定要避開使用關鍵字做為函數名
-
-			
+			◆「'ACTION_SUFFIX' => 'Action'」還有一個功能 那就是把一個函數變成執行前+執行中+執行後三個函數
+				▼P37
+					▽public function _berfor_xxx()
+					▽public function xxx()
+					▽public function _after_xxx()
+			◆「'URL_CASE_INSENSITIVE' => true」URL路徑目錄不分大小寫參數設定
+				▼P40
+			◆U函數:產生URL	(可給等待跳轉使用)
+				▼P41
+			◆json/xml字串輸出: $this->ajaxReturn($xxx) 或 $this->ajaxReturn($xxx,'xml')
+				▼P43
+			◆網址重新自動立即轉址(跳到登錄頁): $this->redirect('函數名');
+				▼P44
+			◆等待跳轉: $this->succes(...); 或 $this->error(...);
+				▼P46
+			◆判斷呼叫該PHP的模式為何[POST/GET/DELETE/...]
+				▼P46
+			◆I函數:讀取參數輸入
+				▼P48
+			◆使用空操作/空控制器 實現防呆操作
+				▼P50
 			
 ---------------------------------------------------------------------------
 
