@@ -60,7 +60,26 @@
 				▼P48
 			◆使用空操作/空控制器 實現防呆操作
 				▼P50
-			
+2018/04/15: chapter-5測試成功
+			◆Application\Common\Conf\config.php設定DB連線資訊
+			◆建立空的M直接存取DB
+				▼JashliaoController.class.php
+					class JashliaoController extends Controller
+					{
+						public function jashliao()
+						{
+							echo '您访问了home/jashliao/jashliao';
+						}
+						public function showuserdata()
+						{
+							$m = new Model();
+							$data = $m->query('SELECT * FROM c5_user');
+							print_r($data);
+						}	
+					}				
+				▼測試結果
+					▽http://localhost:8080/thinkphp_book/home/jashliao/jashliao O
+					▽http://localhost:8080/thinkphp_book/home/jashliao/showuserdata O
 ---------------------------------------------------------------------------
 
 MVC->自己使用時 M使用空的，V用模板網頁，C自己寫
